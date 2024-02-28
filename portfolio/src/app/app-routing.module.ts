@@ -17,7 +17,7 @@ const rts: Routes = [
       { path: 'contact', component: ContactComponent },
     ],
   },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent},
   { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
   { path:'project/:id',component:ProjectComponent},
