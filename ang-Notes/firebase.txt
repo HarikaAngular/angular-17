@@ -12,12 +12,10 @@ Enable Authentication: In the Firebase console, navigate to Authentication under
 3. Configure Firebase in Angular:
 
 Install the Firebase CLI (optional):
-Bash
 npm install -g firebase-tools
 Use code with caution.
 (This is helpful for initializing Firebase in your project, but not strictly necessary.)
 Create a firebase.json file: In your project's root directory, run:
-Bash
 firebase init
 Use code with caution.
 Choose Use an existing project and select your Firebase project from the list.
@@ -48,7 +46,6 @@ Use code with caution.
 
 Generate a Service: Run ng generate service auth to create an auth.service.ts file.
 Inject AngularFireAuth and AngularFirestore (optional):
-TypeScript
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore'; // Optional for storing user data
@@ -66,7 +63,6 @@ Use code with caution.
 6. Implement Authentication Methods:
 
 Sign Up:
-TypeScript
 async signup(email: string, password: string) {
   try {
     const userCredential = await this.auth.createUserWithEmailAndPassword(email, password);
@@ -79,7 +75,6 @@ async signup(email: string, password: string) {
 }
 Use code with caution.
 Sign In:
-TypeScript
 async signin(email: string, password: string) {
   try {
     const userCredential = await this.auth.signInWithEmailAndPassword(email, password);
@@ -90,8 +85,7 @@ async signin(email: string, password: string) {
   }
 }
 Use code with caution.
-Sign Out:
-TypeScript
+
 async signout() {
   await this.auth.signOut();
 }
