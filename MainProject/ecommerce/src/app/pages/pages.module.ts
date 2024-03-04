@@ -10,7 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { CartComponent } from './cart/cart.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { CartComponent } from './cart/cart.component';
   ],
   imports: [
     CommonModule,
-  
+  RouterModule
   ],
 })
 export class PagesModule {}
